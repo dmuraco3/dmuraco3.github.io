@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body {
+    margin: 0;
+    background-color: rgba(51, 51, 51, 1);
+}
+
+.nav {
+    overflow: hidden;
+}
+
+.logo a {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    padding: 14px 14px;
+}
+
+.contact, .services, .about, .home {
+    display: block;
+    text-decoration: none;
+    color: white;
+    float: right;
+    padding: 14px 14px;
+    font-size: 14px;
+}
+
+#active {
+    color: #cc1100;
+}
+
+.Center {
+    margin-top: 5%;
+    margin-left: 2%;
+    color: white;
+}
+
+.link {
+    text-decoration: none;
+    color: #cc1100;
+}
