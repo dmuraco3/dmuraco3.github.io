@@ -27,3 +27,13 @@ body {
 #active {
     color: blue;
 }
+
+.email {
+    color: white;
+    margin-left: 2%;
+}
+
+.email a {
+    text-decoration: none;
+    color: blue;
+}
