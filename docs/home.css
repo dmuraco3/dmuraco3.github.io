@@ -33,7 +33,7 @@ position: fixed;
     padding: 14px 14px;
 }
 
-.contact, .services, .about, .home, .projects {
+.contact, .about, .home, .projects, .blog {
     display: block;
     text-decoration: none;
     color: white;
@@ -99,4 +99,8 @@ position: fixed;
 }
 .DownloadButton:hover {
     color: blue;
+}
+
+.ProjectTitle {
+    font-size: 18px;
 }
