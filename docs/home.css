@@ -2,12 +2,12 @@
 
 body {
     margin: 0;
-    background-color: rgba(51, 51, 51, 1);
+    background-image: url("so-white.png");
 }
 
 .socials {
-display: inline;
-position: fixed;
+    display: inline;
+    position: fixed;
     top: 92%;
     left: 84%;
     overflow: hidden;
@@ -15,17 +15,19 @@ position: fixed;
 .socials a {
     display: block;
     text-decoration: none;
-    color: white;
+    color: black;
     float: right;
     padding: 14px 14px;
     font-size: 14px;
 }
 
-.nav {
+nav {
     overflow: hidden;
+    background-color: black;
 }
 
 .logo a {
+    margin-left: 10%;
     display: block;
     font-size: 20px;
     text-decoration: none;
@@ -34,73 +36,100 @@ position: fixed;
 }
 
 .contact, .about, .home, .projects, .blog {
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: white;
     float: right;
-    padding: 14px 14px;
+    padding: 20px 14px;
     font-size: 14px;
 }
 
+.contact:after, .about:after, .home::after, .projects::after, .blog::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: red;
+    text-decoration: none;
+    transition: width .5s;
+    text-decoration: none;
+}
+
+
+.contact:hover::after, .about:hover::after, .home:hover::after, .projects:hover::after, .blog:hover::after {
+    width: 100%;
+    transition: width .5s;
+    text-decoration: none;
+}
+
+.contact:hover {
+    text-decoration: none;
+}
+
+
+.blog {
+    margin-right: 10%;
+}
+
 #active {
-    color: blue;
+    text-decoration: none;
+    color: red;
 }
 
-.Center {
-    margin-top: 5%;
-    margin-left: 2%;
+#button {
+    text-decoration: none;
     color: white;
 }
 
-.link {
-    text-decoration: none;
-    color: blue;
+.container {
+    opacity: 0;
 }
 
-.ProjectsSection {
-    margin-top: 5%;
-    margin-left: 2%;
+.latest-project h1, .latest-project p, .latest-project a {
+    text-align: right;
+}
+
+.project-button {
+    float: right;
+    text-decoration: none;
+    background-color: black;
     color: white;
-}
+    padding: 5px 10px;
+} 
 
-.ProjectsSection li a{
-    padding-right: 1%;
-}
-
-.ViewCodeButton {
-    display: inline-block;
-    padding: 2px 2px;
-    margin: 0;
-    font-size: medium;
-    cursor: pointer;
-    text-align: center;
+.project-button:hover {
     text-decoration: none;
-    outline: none;
-    color: rgba(51, 51, 51, 1);
-    background-color: white;
-    border: none;
-}
-.ViewCodeButton:hover {
-    color: blue;
+    color: red;
+    transition: color ease-in 0.5s;
 }
 
-.DownloadButton {
-    display: inline-block;
-    padding: 2px 2px;
-    margin: 0;
-    font-size: medium;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: rgba(51, 51, 51, 1);
-    background-color: white;
-    border: none;
-}
-.DownloadButton:hover {
-    color: blue;
+.about-section a {
+    color: black;
+    font-size: 150%;
 }
 
-.ProjectTitle {
-    font-size: 18px;
+
+.about-section a i {
+    color: red;
+    font-size: 150%;
+}
+
+.about-section p {
+    text-align: left;
+}
+
+.work-section a {
+    float: right;
+    font-size: 150%;
+    color: black;
+}
+
+.work-section p {
+    float: right;
+    text-align: right;
+}
+
+.work-section a i{
+    font-size: 150%;
+    color: red;
 }
