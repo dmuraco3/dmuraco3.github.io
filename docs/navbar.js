@@ -27,7 +27,7 @@ function getUrl() {
 
 
 function test() {
-   if(window.location.href == "http://127.0.0.1:5500/docs/index.html") {
+   if(window.location.href == "http://127.0.0.1:5500/docs/index.html" || window.location.href == "https://dmuraco3.github.io/") {
     document.getElementById("nav").innerHTML += '<a class="blog" id="button" href="blog/index.html">BLOG</a>';;
     document.getElementById("nav").innerHTML += '<a class="contact" id="button" href="contact/index.html">CONTACT</a>';
     document.getElementById("nav").innerHTML += '<a class="about" id="button" href="about/index.html">ABOUT</a>';
