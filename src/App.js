@@ -4,12 +4,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {FaChevronDown as Down} from 'react-icons/fa'
-import Typing from 'react-typing-animation';
+import Typist from 'react-typist'
 import { useRef } from "react";
 import Projects from './components/projects/index.js'
 import About from './components/about/index.js'
 import Contact from './components/contact/index.js'
-import Hire from './components/hire/index.js'
 import NotFound from './components/Error404/index.js'
 
 
@@ -67,6 +66,9 @@ export default function App() {
                   <Link
                     to="/about"
                     className="link"
+                    onClick={() => {
+                      setActive("ABOUT")
+                    }}
                     onMouseEnter={() => {ActiveHovered("ABOUT")}}
                     onMouseLeave={() => {deActiveHovered()}}
                     style={Active==="ABOUT" || Hovered==="ABOUT" ? {color:"white"}: {color: "rgba(255,255,255,.5)"}}
@@ -78,23 +80,15 @@ export default function App() {
                   <Link
                     to="/contact"
                     className="link"
+                    onClick={() => {
+                      setActive("CONTACT")
+                    }}
                     onMouseEnter={() => {ActiveHovered("CONTACT")}}
                     onMouseLeave={() => {deActiveHovered()}}
                     style={Active==="CONTACT" || Hovered==="CONTACT" ? {color:"white"}: {color: "rgba(255,255,255,.5)"}}
                   >
                     CONTACT
                   </Link>
-                </Nav.Link>
-                <Nav.Link 
-                  
-                >
-                  <Link
-                    to="/hire"
-                    className="link HireMe"
-                    onMouseEnter={() => {ActiveHovered("HIRE")}}
-                    onMouseLeave={() => {deActiveHovered()}}
-                    style={Active==="HIRE" || Hovered==="HIRE" ? {color:"white"}: {color: "rgba(255,255,255,.5)"}}
-                  >HIRE DYLAN</Link>
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
@@ -122,10 +116,6 @@ export default function App() {
             <Contact />
           </Route>
 
-          <Route exact path="/hire">
-            <Hire /> 
-          </Route>
-
           <Route component={NotFound} /> 
 
         </Switch>
@@ -149,9 +139,9 @@ function Home() {
       </div>
       <div className="focus">
         <span>I'm a </span>
-        <Typing speed={200} startDelay={100}>
-          <span style={{color: 'white'}} >Full Stack Developer</span>
-        </Typing>
+        <Typist >
+          <span>Full Stack Developer</span>
+        </Typist>
 
         <h4>designing & building exceptional projects</h4>
 
