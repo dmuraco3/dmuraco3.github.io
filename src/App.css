@@ -15,7 +15,15 @@ body {
   font-size: 30px;
 }
 
+.link {
+  text-decoration: none;
+}
+.link:hover {
+  text-decoration: none;
+}
+
 .HireMe {
+  padding: 5px 10px 5px 10px;
   border-radius: 10px;
   border: 1px solid #ffffff;
 }
